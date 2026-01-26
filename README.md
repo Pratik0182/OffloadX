@@ -12,6 +12,8 @@ The application follows a specific logic flow to handle tasks:
 4.  **Remote Processing:** The backend (Flask/FastAPI) receives the data, processes it (e.g., image filtering or matrix multiplication), and sends back the result.
 5.  **Latency Tracking:** The app records timestamps for 'Send', 'Process', and 'Receive' events to calculate total execution time and compare it with local processing.
 
+![Data Flow Diagram](assets/dfd.jpg)
+
 **Project Components**
 - **Android Client:** Native Android application (Java/Kotlin) handling UI and logic.
 - **Python Backend:** A lightweight compute server, deployable on any local machine or cloud environment.
@@ -22,3 +24,6 @@ The application follows a specific logic flow to handle tasks:
 - **Local:** On-device processing.
 - **Remote Offloading:** Seamless task execution on a connected server or local compute node.
 - **Network Share:** Secure P2P-style data sharing between authorized devices.
+
+**Project Timeline**
+![Project Timeline](assets/timeline.jpeg)
