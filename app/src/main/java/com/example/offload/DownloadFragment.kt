@@ -16,11 +16,10 @@ class DownloadFragment : Fragment(R.layout.fragment_download) {
 
         // 2. Create your Mock Data (The list of files)
         val files = listOf(
-            FileModel("Project_Offload.pdf", "2.4 MB"),
-            FileModel("Final_Presentation.pptx", "5.1 MB"),
-            FileModel("App_Screenshot.png", "800 KB"),
-            FileModel("User_Manual.txt", "15 KB"),
-            FileModel("Development_Build.apk", "24.0 MB")
+            // fileName, fileSize, fileDate, fileType
+            FileModel("Project_Plan.pdf", "1.2 MB", "Oct 24, 2025", "pdf"),
+            FileModel("Vacation.jpg", "4.5 MB", "Oct 22, 2025", "image"),
+            FileModel("Budget.xlsx", "150 KB", "Oct 20, 2025", "doc")
         )
 
         // 3. Set the LayoutManager (Crucial: This is often why the screen is blank!)

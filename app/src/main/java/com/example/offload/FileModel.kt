@@ -1,7 +1,8 @@
 package com.example.offload
 
-// A data class is a concise way to create a class that only holds data
 data class FileModel(
     val fileName: String,
-    val fileSize: String
+    val fileSize: String,
+    val fileDate: String, // New field
+    val fileType: String  // New field (e.g., "pdf", "image", "doc")
 )
