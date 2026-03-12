@@ -1,11 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Offload" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#26A69A</item>
-        <item name="colorPrimaryVariant">#00796B</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">#26A69A</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    <style name="Theme.Offload" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
     </style>
 
     <style name="CircleImage">

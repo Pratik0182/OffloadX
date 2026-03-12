@@ -27,4 +27,10 @@
         android:name="com.example.offload.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.offload.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
 </navigation>

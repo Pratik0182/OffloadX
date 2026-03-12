@@ -5,23 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="?attr/colorSurface"
     tools:context=".OTPActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="32dp"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@android:drawable/ic_dialog_email"
+            app:tint="?attr/colorPrimary"
+            android:layout_marginBottom="24dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Verification"
-            android:textSize="28sp"
-            android:textStyle="bold"
+            android:textSize="32sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?attr/colorPrimary"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -29,28 +38,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check your email for the OTP code"
-            android:textColor="#757575"
-            android:layout_marginBottom="32dp"/>
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="40dp"/>
 
-        <EditText
-            android:id="@+id/etOtpCode"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:hint="0 0 0 0"
-            android:gravity="center"
-            android:inputType="number"
-            android:textSize="24sp"
-            android:letterSpacing="0.2"
-            android:background="@android:drawable/editbox_background"
-            android:layout_marginBottom="32dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="OTP Code"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="40dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOtpCode"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="24sp"
+                android:letterSpacing="0.3"
+                android:maxLength="4" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnVerify"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="VERIFY &amp; PROCEED"
-            android:backgroundTint="#6200EE"
-            android:textColor="#FFFFFF"/>
+            android:text="Verify &amp; Proceed"
+            android:textSize="16sp"
+            app:cornerRadius="12dp" />
 
     </LinearLayout>
 

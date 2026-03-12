@@ -5,30 +5,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:padding="16dp"
     tools:context=".StatsFragment">
+
+    <TextView
+        android:id="@+id/tvStatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_top_stats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp"
-        app:strokeWidth="1dp"
-        app:strokeColor="@android:color/darker_gray"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="16dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:layout_constraintTop_toBottomOf="@id/tvStatsTitle">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
+            
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Overall Performance"
-                android:textStyle="bold" />
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="92%"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Efficiency"
+                        android:textSize="12sp"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="24sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasks Done"
+                        android:textSize="12sp"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -37,19 +103,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorOutline"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="?attr/colorSurface"
         app:layout_constraintTop_toBottomOf="@id/card_top_stats">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
+            
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detailed Statistics" />
+                android:textColor="?attr/colorOnSurface"
+                android:text="System Health"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:text="Server load is currently nominal. Local battery offloading is optimized."
+                android:textSize="14sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
